@@ -12,63 +12,136 @@
 <body>
 
 	<canvas id="canvas" width=400 height=200></canvas>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js" charset="utf-8"></script>
 	<script src="js/script.js" charset="utf-8"></script>
 
 
-	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 78 50">
+	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 90 50">
 
-		<g transform="translate(0 20)" stroke="#fff" stroke-width=".5" font-family="Verdana" font-size="2.5">
-			<g class="key" fill="#ccc">
-				<path id="escape" d="M0,0h6v6h-6z" />
-				<path id="f1" d="M6,0h6v6h-6z" />
-				<path id="f2" d="M12,0h6v6h-6z" />
-				<path id="f3" d="M18,0h6v6h-6z" />
-				<path id="f4" d="M24,0h6v6h-6z" />
-				<path id="f5" d="M30,0h6v6h-6z" />
-				<path id="f6" d="M36,0h6v6h-6z" />
-				<path id="f7" d="M42,0h6v6h-6z" />
-				<path id="f8" d="M48,0h6v6h-6z" />
-				<path id="f9" d="M54,0h6v6h-6z" />
-				<path id="f10" d="M60,0h6v6h-6z" />
-				<path id="f11" d="M66,0h6v6h-6z" />
-				<path id="f12" d="M72,0h6v6h-6z" />
+		<g stroke="#fff" stroke-width=".5" font-family="Verdana" font-size="2.5">
+			<g id="firstRow" transform="translate(0 20)  scale(1.155 1)">
+				<g class="key" fill="#ccc">
+					<path id="escape" d="M0,0h6v6h-6z" />
+					<path id="f1" d="M6,0h6v6h-6z" />
+					<path id="f2" d="M12,0h6v6h-6z" />
+					<path id="f3" d="M18,0h6v6h-6z" />
+					<path id="f4" d="M24,0h6v6h-6z" />
+					<path id="f5" d="M30,0h6v6h-6z" />
+					<path id="f6" d="M36,0h6v6h-6z" />
+					<path id="f7" d="M42,0h6v6h-6z" />
+					<path id="f8" d="M48,0h6v6h-6z" />
+					<path id="f9" d="M54,0h6v6h-6z" />
+					<path id="f10" d="M60,0h6v6h-6z" />
+					<path id="f11" d="M66,0h6v6h-6z" />
+					<path id="f12" d="M72,0h6v6h-6z" />
+				</g>
+				<!-- Not perfect. Go for readability vs 99.999999% of svgs that have 6 decimal places, everywhere! -->
+				<g class="keyText" transform="translate(.5 4)">
+					<text x=".5" y="-.5">esc</text>
+					<text x="7">F1</text>
+					<text x="13">F2</text>
+					<text x="19">F3</text>
+					<text x="25">F4</text>
+					<text x="31">F5</text>
+					<text x="37">F6</text>
+					<text x="43">F7</text>
+					<text x="49">F8</text>
+					<text x="55">F9</text>
+					<text x="60">F10</text>
+					<text x="66">F11</text>
+					<text x="72">F12</text>
+				</g>
 			</g>
-			<!-- Not perfect. Go for readability vs 99.999999% of svg that have 6 decimal places! -->
-			<g class="keyText" transform="translate(.5 4)">
-				<text x=".5" y="-.5">esc</text>
-				<text x="7">F1</text>
-				<text x="13">F2</text>
-				<text x="19">F3</text>
-				<text x="25">F4</text>
-				<text x="31">F5</text>
-				<text x="37">F6</text>
-				<text x="43">F7</text>
-				<text x="49">F8</text>
-				<text x="55">F9</text>
-				<text x="60">F10</text>
-				<text x="66">F11</text>
-				<text x="72">F12</text>
+			<g id="secondRow" transform="translate(0 26)">
+				<g class="key" fill="#ccc">
+					<path id="backTick" d="M0,0h6v6h-6z" />
+					<path id="n1" d="M6,0h6v6h-6z" />
+					<path id="n2" d="M12,0h6v6h-6z" />
+					<path id="n3" d="M18,0h6v6h-6z" />
+					<path id="n4" d="M24,0h6v6h-6z" />
+					<path id="n5" d="M30,0h6v6h-6z" />
+					<path id="n6" d="M36,0h6v6h-6z" />
+					<path id="n7" d="M42,0h6v6h-6z" />
+					<path id="n8" d="M48,0h6v6h-6z" />
+					<path id="n9" d="M54,0h6v6h-6z" />
+					<path id="n0" d="M60,0h6v6h-6z" />
+					<path id="hyphen" d="M66,0h6v6h-6z" />
+					<path id="equals" d="M72,0h6v6h-6z" />
+					<path id="backspace" d="M78,0h12v6h-12z" />
+				</g>
+				<g class="keyText" font-size="2">
+					<g class="upperText" transform="translate(1 2.5)">
+						<text x=".5" y="-.5">~</text>
+						<text x="7">!</text>
+						<text x="13">@</text>
+						<text x="19">#</text>
+						<text x="25">$</text>
+						<text x="31">%</text>
+						<text x="37">^</text>
+						<text x="43">&amp;</text>
+						<text x="49">*</text>
+						<text x="55.5">(</text>
+						<text x="61.5">)</text>
+						<text x="67.5">_</text>
+						<text x="73">+</text>
+						<text x="78" y="1">backspace</text>
+					</g>
+					<g class="lowerText" transform="translate(1 5)">
+						<text x=".5" y="-.5">`</text>
+						<text x="7">1</text>
+						<text x="13">2</text>
+						<text x="19">3</text>
+						<text x="25">4</text>
+						<text x="31">5</text>
+						<text x="37">6</text>
+						<text x="43">7</text>
+						<text x="49">8</text>
+						<text x="55.5">9</text>
+						<text x="61">0</text>
+						<text x="67.5">-</text>
+						<text x="73">=</text>
+					</g>
+				</g>
+				<!-- TODO Mabel the unicorn moves on different screen sizes, will fix with responsive design, taking away width & height in svg (yes it does!) TODO much later on-->
+				<!-- TODO more weirdess wrinkles and wonders ahead  thirdRow only need lowertext at { onwards, though treat all 1 character keys as upper-->
+				<!-- consider putting svg as partials per row (never seen this but maybe an idea, even do it and folderize as one idea. This would be a folder only with this svg and partials. Highly unusual!) -->
+				<!-- <g id="thirdRow"></g> -->
+				<!-- <g class="keyText" font-size="2">
+						<g class="upperText" transform="translate(1 2.5)">
+							<text x=".5" y="-.5">~</text>
+							<text x="7">!</text>
+							<text x="13">@</text>
+							<text x="19">#</text>
+							<text x="25">$</text>
+							<text x="31">%</text>
+							<text x="37">^</text>
+							<text x="43">&amp;</text>
+							<text x="49">*</text>
+							<text x="55.5">(</text>
+							<text x="61.5">)</text>
+							<text x="67.5">_</text>
+							<text x="73">+</text>
+							<text x="78" y="1">backspace</text>
+						</g>
+						<g class="lowerText" transform="translate(1 5)">
+							<text x=".5" y="-.5">`</text>
+							<text x="7">1</text>
+							<text x="13">2</text>
+							<text x="19">3</text>
+							<text x="25">4</text>
+							<text x="31">5</text>
+							<text x="37">6</text>
+							<text x="43">7</text>
+							<text x="49">8</text>
+							<text x="55.5">9</text>
+							<text x="61">0</text>
+							<text x="67.5">-</text>
+							<text x="73">=</text>
+						</g>
+					</g> -->
+
 			</g>
 		</g>
-		<!-- Still working on ... -->
-		<!-- <g transform="translate(20 20)">
-  	<path id="backTick" d="M0,0h6v6h-6z"/>
-  	<path id="n1" d="M0,0h6v6h-6z"/>
-  	<path id="n2" d="M6,0h6v6h-6z"/>
-  	<path id="n3" d="M12,0h6v6h-6z"/>
-  	<path id="n4" d="M18,0h6v6h-6z"/>
-  	<path id="n5" d="M24,0h6v6h-6z"/>
-  	<path id="n6" d="M30,0h6v6h-6z"/>
-  	<path id="n7" d="M36,0h6v6h-6z"/>
-  	<path id="n8" d="M42,0h6v6h-6z"/>
-  	<path id="n9" d="M48,0h6v6h-6z"/>
-  	<path id="n0" d="M54,0h6v6h-6z"/>
-  	<path id="hyphen" d="M60,0h6v6h-6z"/>
-  	<path id="equals" d="M66,0h6v6h-6z"/>
-  	<path id="backspace" d="M72,0h6v6h-6z"/>
-  </g> -->
 	</svg>
 
 </body>
