@@ -6,3 +6,6 @@ text {
   fill: blue;
   stroke: none;
 }
+.key {
+  fill: #ccc;
+}

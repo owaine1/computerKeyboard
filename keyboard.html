@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- TODO Mabel the unicorn moves on different screen sizes, will fix with responsive design, taking away width & height in svg (yes it does!) TODO much later on-->
 <html lang="en">
 
 <head>
@@ -15,12 +16,23 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js" charset="utf-8"></script>
 	<script src="js/script.js" charset="utf-8"></script>
 
+	<!-- The general keyboard layout I'm sticking to:
+escape key to F12 can fit the keyboard span, keys all have the same width (bigger than standard key width (SKW))
+backtick key to equals key SKW. Backspace is 2SKW.
+tab is 1.5SKW. Q to } key SKW. Backslash is 1.5SKW.
+capslock is 1 + 1/2 + 1/3 SKW a to ' are SKW. return is 1 + 1/2 + 2/3 SKW
 
-	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 90 50">
+Shift is 2.3SWK z to forwardslash SKW. Shift right looks bigger than shift left
+bottom row keys aren't totally standard on most keyboard. Will look futher when get there
+
+A sortof rule in spacing is between the numbers and qwerty shifts .5 right.
+Then qwerty and subsequent rows shift 1/3 right for each row-->
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 90 100">
 
 		<g stroke="#fff" stroke-width=".5" font-family="Verdana" font-size="2.5">
 			<g id="firstRow" transform="translate(0 20)  scale(1.155 1)">
-				<g class="key" fill="#ccc">
+				<g class="key">
 					<path id="escape" d="M0,0h6v6h-6z" />
 					<path id="f1" d="M6,0h6v6h-6z" />
 					<path id="f2" d="M12,0h6v6h-6z" />
@@ -35,7 +47,6 @@
 					<path id="f11" d="M66,0h6v6h-6z" />
 					<path id="f12" d="M72,0h6v6h-6z" />
 				</g>
-				<!-- Not perfect. Go for readability vs 99.999999% of svgs that have 6 decimal places, everywhere! -->
 				<g class="keyText" transform="translate(.5 4)">
 					<text x=".5" y="-.5">esc</text>
 					<text x="7">F1</text>
@@ -53,7 +64,7 @@
 				</g>
 			</g>
 			<g id="secondRow" transform="translate(0 26)">
-				<g class="key" fill="#ccc">
+				<g class="key">
 					<path id="backTick" d="M0,0h6v6h-6z" />
 					<path id="n1" d="M6,0h6v6h-6z" />
 					<path id="n2" d="M12,0h6v6h-6z" />
@@ -70,24 +81,24 @@
 					<path id="backspace" d="M78,0h12v6h-12z" />
 				</g>
 				<g class="keyText" font-size="2">
-					<g class="upperText" transform="translate(1 2.5)">
-						<text x=".5" y="-.5">~</text>
-						<text x="7">!</text>
-						<text x="13">@</text>
-						<text x="19">#</text>
-						<text x="25">$</text>
-						<text x="31">%</text>
-						<text x="37">^</text>
-						<text x="43">&amp;</text>
-						<text x="49">*</text>
-						<text x="55.5">(</text>
-						<text x="61.5">)</text>
-						<text x="67.5">_</text>
-						<text x="73">+</text>
-						<text x="78" y="1">backspace</text>
+					<g class="upperText" transform="translate(2 2.5)">
+						<text y="-.5">~</text>
+						<text x="6.5">!</text>
+						<text x="12">@</text>
+						<text x="18">#</text>
+						<text x="24">$</text>
+						<text x="30">%</text>
+						<text x="36.5">^</text>
+						<text x="42.5">&amp;</text>
+						<text x="48.5">*</text>
+						<text x="54.5">(</text>
+						<text x="60.5">)</text>
+						<text x="66.5">_</text>
+						<text x="72">+</text>
+						<text x="77" y="1">backspace</text>
 					</g>
-					<g class="lowerText" transform="translate(1 5)">
-						<text x=".5" y="-.5">`</text>
+					<g class="lowerText" transform="translate(1.5 5)">
+						<text x="1">`</text>
 						<text x="7">1</text>
 						<text x="13">2</text>
 						<text x="19">3</text>
@@ -96,52 +107,80 @@
 						<text x="37">6</text>
 						<text x="43">7</text>
 						<text x="49">8</text>
-						<text x="55.5">9</text>
+						<text x="55">9</text>
 						<text x="61">0</text>
-						<text x="67.5">-</text>
-						<text x="73">=</text>
+						<text x="67">-</text>
+						<text x="72.5">=</text>
 					</g>
 				</g>
-				<!-- TODO Mabel the unicorn moves on different screen sizes, will fix with responsive design, taking away width & height in svg (yes it does!) TODO much later on-->
-				<!-- TODO more weirdess wrinkles and wonders ahead  thirdRow only need lowertext at { onwards, though treat all 1 character keys as upper-->
-				<!-- consider putting svg as partials per row (never seen this but maybe an idea, even do it and folderize as one idea. This would be a folder only with this svg and partials. Highly unusual!) -->
-				<!-- <g id="thirdRow"></g> -->
-				<!-- <g class="keyText" font-size="2">
-						<g class="upperText" transform="translate(1 2.5)">
-							<text x=".5" y="-.5">~</text>
-							<text x="7">!</text>
-							<text x="13">@</text>
-							<text x="19">#</text>
-							<text x="25">$</text>
-							<text x="31">%</text>
-							<text x="37">^</text>
-							<text x="43">&amp;</text>
-							<text x="49">*</text>
-							<text x="55.5">(</text>
-							<text x="61.5">)</text>
-							<text x="67.5">_</text>
-							<text x="73">+</text>
-							<text x="78" y="1">backspace</text>
+				<g id="thirdRow" transform="translate(0 6)">
+					<g class="key">
+						<path id="tab" d="M0,0h9v6h-9z" />
+						<path id="q" d="M9,0h6v6h-6z" />
+						<path id="w" d="M15,0h6v6h-6z" />
+						<path id="e" d="M21,0h6v6h-6z" />
+						<path id="r" d="M27,0h6v6h-6z" />
+						<path id="t" d="M33,0h6v6h-6z" />
+						<path id="y" d="M39,0h6v6h-6z" />
+						<path id="u" d="M45,0h6v6h-6z" />
+						<path id="i" d="M51,0h6v6h-6z" />
+						<path id="o" d="M57,0h6v6h-6z" />
+						<path id="p" d="M63,0h6v6h-6z" />
+						<path id="leftSquareBracket" d="M69,0h6v6h-6z" />
+						<path id="rightSquareBracket" d="M75,0h6v6h-6z" />
+						<path id="backSlash" d="M81,0h9v6h-9z" />
+					</g>
+					<g class="keyText" font-size="3">
+						<g class="mainText" transform="translate(2 4)">
+							<text>tab</text>
+							<text x="9">Q</text>
+							<text x="14.5">W</text>
+							<text x="21">E</text>
+							<text x="27">R</text>
+							<text x="33">T</text>
+							<text x="39">Y</text>
+							<text x="45">U</text>
+							<text x="51.5">I</text>
+							<text x="57">O</text>
+							<text x="63">P</text>
+							<g class="upperText" transform="translate(69 -1.75)" font-size="2">
+								<text>{</text>
+								<text x="6.5">}</text>
+								<text x="14">|</text>
+								<g class="lowerText">
+									<text y="2.5">[</text>
+									<text x="6.5" y="2.5">]</text>
+									<text x="14" y="2.5">\</text>
+								</g>
+							</g>
 						</g>
-						<g class="lowerText" transform="translate(1 5)">
-							<text x=".5" y="-.5">`</text>
-							<text x="7">1</text>
-							<text x="13">2</text>
-							<text x="19">3</text>
-							<text x="25">4</text>
-							<text x="31">5</text>
-							<text x="37">6</text>
-							<text x="43">7</text>
-							<text x="49">8</text>
-							<text x="55.5">9</text>
-							<text x="61">0</text>
-							<text x="67.5">-</text>
-							<text x="73">=</text>
-						</g>
-					</g> -->
+					</g>
+					<!-- To here -->
+					<g id="thirdRow" transform="translate(0 6)">
+						<g class="key">
+							<path id="caps" d="M0,0h11v6h-11z" />
+							<path id="a" d="M11,0h6v6h-6z" />
+							<path id="s" d="M17,0h6v6h-6z" />
+							<path id="d" d="M23,0h6v6h-6z" />
+							<path id="f" d="M29,0h6v6h-6z" />
+							<path id="g" d="M35,0h6v6h-6z" />
+							<path id="h" d="M41,0h6v6h-6z" />
+							<path id="j" d="M47,0h6v6h-6z" />
+							<path id="k" d="M53,0h6v6h-6z" />
+							<path id="l" d="M59,0h6v6h-6z" />
+							<path id="semicolon" d="M65,0h6v6h-6z" />
+							<path id="singleQuote" d="M71,0h6v6h-6z" />
+							<path id="return" d="M77,0h13v6h-13z" />
 
+						</g>
+					</g>
+					<!-- fourthRow same structure as thirdrow: lowerkeys nested in upperkeys. Note you may come stuck later with functionality because the lowertext is nested in uppertext, it even may be a problem with CSS. Just be aware!!! No added new class -->
+
+					<!-- TODO when keyboard complete: Consider putting svg as partials per row (never seen this but maybe an idea, even do it and folderize as one idea. This would be a folder only with this svg and partials. Highly unusual!) -->
+
+
+				</g>
 			</g>
-		</g>
 	</svg>
 
 </body>
