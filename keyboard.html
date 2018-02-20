@@ -161,6 +161,8 @@ Last line unsure. Quite a mix will eyeball it-->
 			<g id="fourthRow" transform="translate(0 38)">
 				<g class="key">
 					<path id="caps" d="M0,0h11v6h-11z" />
+					<!-- maybe play around with. I like the idea!-->
+					<path id="capsLed" d="M1,1.5a.5 .5 0 0 1 1,0a.5 .5 0 0 1-1,0z" fill="#0f0" stroke="none" />
 					<path id="a" d="M11,0h6v6h-6z" />
 					<path id="s" d="M17,0h6v6h-6z" />
 					<path id="d" d="M23,0h6v6h-6z" />
@@ -176,7 +178,7 @@ Last line unsure. Quite a mix will eyeball it-->
 				</g>
 				<g class="keyText" font-size="3">
 					<g class="mainText" transform="translate(1 4)">
-						<text y="-.5" font-size="2">caps lock</text>
+						<text y=".5" font-size="2">caps lock</text>
 						<text x="12">A</text>
 						<text x="18">S</text>
 						<text x="24">D</text>
@@ -237,14 +239,54 @@ Last line unsure. Quite a mix will eyeball it-->
 					</g>
 				</g>
 			</g>
+			<g id="sixthRow" transform="translate(0 50)">
+				<g class="key">
+					<path id="fn" d="M0,0h6v6h-6z" />
+					<path id="ctrl" d="M6,0h6v6h-6z" />
+					<path id="leftAlt" d="M12,0h6v6h-6z" />
+					<path id="leftCommand" d="M18,0h8v6h-8z" />
+					<path id="spacebar" d="M26,0h30v6h-30z" />
+					<path id="rightCommand" d="M56,0h8v6h-8z" />
+					<path id="rightAlt" d="M64,0h6v6h-6z" />
+					<g id="leftArrow">
+						<path d="M70,3h6v3h-6z" />
+						<path class="arrow" d="M72,4.5l2-1v2z" />
+					</g>
+					<g id="upArrow">
+						<path d="M77,0h6v3h-6z" />
+						<path class="arrow" d="M79,2.5l1-2 1,2z" />
+					</g>
+					<g id="downArrow">
+						<path d="M77,3h6v3h-6z" />
+						<path class="arrow" d="M79,3.5h2l-1,2z" />
+					</g>
+					<g id="rightArrow">
+						<path d="M84,3h6v3h-6z" />
+						<path class="arrow" d="M86,3.5l2,1-2,1z" />
+					</g>
+				</g>
 
-
+				<g class="keyText" font-size="2">
+					<g class="mainText" transform="translate(1 4)">
+						<text>fn</text>
+						<text x="6.5">ctrl</text>
+						<text x="12.5">alt</text>
+						<text x="18.5">cmnd</text>
+						<text x="56">cmnd</text>
+						<text x="64.5">alt</text>
+					</g>
+				</g>
+			</g>
 			<!-- to here -->
-			<!-- last line add arrow keys for the vim uninitiated  -->
+			<!-- last line add arrow keys for the vim uninitiated DONE! -->
 		</g>
 	</svg>
 	<!-- TODO when keyboard complete: Consider putting svg as partials per row (never seen this but maybe an idea, even do it and folderize as one idea. This would be a folder only with this svg and partials. Highly unusual!) Actually not a bad idea having gone down a nested transforms rabbit-hole -->
+	<!-- TODO similar to above, consider puting in ejs into all the key shapes (I'd like to use <use> but not supported in Safari. Maybe ejs would be better) And could allow for different key shapes / styles (user customization of). Already seeing petal style keys! Stars similar -->
+	<!-- look at functionality tomorrow. Will be tough! -->
+	<svg>
 
+	</svg>
 </body>
 
 </html>

@@ -2,10 +2,12 @@
 
 /* e.g. the text and transform and text color and font-family */
 
-text {
+text,
+.arrow {
   fill: blue;
   stroke: none;
 }
+
 .key {
   fill: #ccc;
 }
