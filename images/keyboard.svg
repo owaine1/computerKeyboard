@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<!-- TODO Mabel the unicorn moves on different screen sizes, will fix with responsive design, taking away width & height in svg (yes it does!) TODO much later on-->
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Document</title>
-</head>
 
-<body>
-
-	<canvas id="canvas" width=400 height=200></canvas>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js" charset="utf-8"></script>
-	<script src="js/script.js" charset="utf-8"></script>
-
-	<!-- The general keyboard layout I'm sticking to:
+<!-- The general keyboard layout I'm sticking to:
 escape key to F12 can fit the keyboard span, keys all have the same width (bigger than standard key width (SKW))
 backtick key to equals key SKW. Backspace is 2SKW.
 tab is 1.5SKW. Q to } key SKW. Backslash is 1.5SKW.
 capslock is 1 + 1/2 + 1/3 SKW a to ' are SKW. return is 1 + 1/2 + 2/3 SKW
 
-Shift is 2 + 1/3 SWK z to forwardslash SKW. Shift right looks bigger than shift left
+Shift is 2.3SWK z to forwardslash SKW. Shift right looks bigger than shift left
 bottom row keys aren't totally standard on most keyboard. Will look futher when get there
 
-A sortof rule in spacing is between the numbers and qwerty shifts 1/2 right.
+A sortof rule in spacing is between the numbers and qwerty shifts .5 right.
 Then qwerty and asdfg rows shift 1/3 right
 asdfg to zxcvb rows shift 1/2 right
 Last line unsure. Quite a mix will eyeball it-->
-
-	<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 90 100">
+		<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 90 100">
 		<g stroke="#fff" stroke-width=".5" font-family="Verdana" font-size="2.5">
 			<g id="firstRow" transform="translate(0 20)  scale(1.155 1)">
 				<g class="key">
@@ -237,14 +220,5 @@ Last line unsure. Quite a mix will eyeball it-->
 					</g>
 				</g>
 			</g>
-
-
-			<!-- to here -->
-			<!-- last line add arrow keys for the vim uninitiated  -->
 		</g>
 	</svg>
-	<!-- TODO when keyboard complete: Consider putting svg as partials per row (never seen this but maybe an idea, even do it and folderize as one idea. This would be a folder only with this svg and partials. Highly unusual!) Actually not a bad idea having gone down a nested transforms rabbit-hole -->
-
-</body>
-
-</html>
